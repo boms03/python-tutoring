@@ -4,8 +4,6 @@
 
 # No cramming a programming language
 
----
-
 We are going to learn a programming language through challenges and projects.
 
 
@@ -25,8 +23,6 @@ What is **a small inconvenience** that happens daily in your life, that annoys y
 
 # Why python?
 
----
-
 - Easy to learn ≠ Low level
 
 - Simple and short code → **Easy to read!**
@@ -41,8 +37,6 @@ What is **a small inconvenience** that happens daily in your life, that annoys y
 
 # Java vs Python
 
----
-
 - Both codes print **“Hello World”** on the screen
 
 - Python code is much simpler and shorter
@@ -53,7 +47,6 @@ What is **a small inconvenience** that happens daily in your life, that annoys y
 
 # Build a recording habit
 
----
 
 **[IMPORTANT!!]** Record your mistakes to avoid the same mistakes in the future
 
@@ -74,7 +67,6 @@ What is **a small inconvenience** that happens daily in your life, that annoys y
 
 # Record your coding experience!
 
----
 
 Github is a code storage where you can **save** and **present** your codes to other developers.
 
@@ -104,7 +96,6 @@ Today we will be covering Chapter 1 and 2
 
 # Calculating with Python
 
----
 
 <div style="text-align:center">
     <img src="img_5.png" width="300">
@@ -114,7 +105,6 @@ Today we will be covering Chapter 1 and 2
 
 ## Basic Calculations
 
----
 
 <div style="text-align:center">
     <img src="img_6.png" width="800">
@@ -122,7 +112,6 @@ Today we will be covering Chapter 1 and 2
 
 ## The Order of Operations
 
----
 - use parentheses to control the order of operations
 - parentheses can be **nested** == ****parentheses can be inside parentheses
 
@@ -140,8 +129,6 @@ Today we will be covering Chapter 1 and 2
 
 ## Prepare for a challenge
 
----
-
 <div style="text-align:center">
     <img src="img_9.png" width="800">
 </div>
@@ -153,8 +140,6 @@ Now is a code editor mode. The code editor mode is used to execute **multiple li
 </div>
 
 ## Challenge 1
-
----
 
 Use parentheses in between 5 + 30 * 20 / 10 to get **70.0**
 
@@ -179,7 +164,6 @@ Use print()
 
 # Variables Are Like Labels
 
----
 - a place to store information such as numbers, text, lists of numbers and text, and so on.
 - use an equal sign (=) and then tell Python what information the variable should
   be the label for
@@ -204,7 +188,6 @@ Use print()
 
 # Variable naming convention
 
----
 ## **Required**
 
 - made up of letters, numbers, and the underscore character (_), but they can’t start with a number.
@@ -217,8 +200,6 @@ Use print()
 - a variable name should be meaningful
 
 ## Quiz 1
-
----
 
 Which variable name is invalid?
 
@@ -248,7 +229,6 @@ D) foundCoins
 
 ## Challenge 2
 
----
 <div style="text-align:center">
     <img src="img_14.png" width="800">
 </div>
@@ -273,6 +253,5 @@ Use variables to express the equation above.
 
 # Chapter 3 will cover..
 
----
 - Data containers like lists, tuples, maps, and string
 - You will be able to store data!
