@@ -1,6 +1,6 @@
-<div style="text-align:center">
+<p align=center>
     <img src="img.png" width="500">
-</div>
+</p>
 
 # No cramming a programming language
 
@@ -17,9 +17,9 @@ What is **a small inconvenience** that happens daily in your life, that annoys y
 **But basics first!**
 
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_1.png" width="500">
-</div>
+</p>
 
 # Why python?
 
@@ -31,9 +31,9 @@ What is **a small inconvenience** that happens daily in your life, that annoys y
 
 
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_2.png" width="500">
-</div>
+</p>
 
 # Java vs Python
 
@@ -61,9 +61,9 @@ What is **a small inconvenience** that happens daily in your life, that annoys y
 - Are there any better solutions? **I am here to help you** 😎
 
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_3.png" width="500">
-</div>
+</p>
 
 # Record your coding experience!
 
@@ -76,9 +76,9 @@ You will save **WIL, homeworks, projects** in GitHub to display your progress to
 
 Below is my github page
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_4.png" width="800">
-</div>
+</p>
 
 ---
 
@@ -97,47 +97,47 @@ Today we will be covering Chapter 1 and 2
 # Calculating with Python
 
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_5.png" width="300">
-</div>
+</p>
 
 - Multiplication and division always go before addition and subtraction
 
 ## Basic Calculations
 
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_6.png" width="800">
-</div>
+</p>
 
 ## The Order of Operations
 
 - use parentheses to control the order of operations
 - parentheses can be **nested** == ****parentheses can be inside parentheses
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_7.png" width="800">
-</div>
+</p>
 
 - multiply 30 by 20 and add the result by 5
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_8.png" width="800">
-</div>
+</p>
 
 - add 5 to 30, and then multiply the result by 20
 
 ## Prepare for a challenge
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_9.png" width="800">
-</div>
+</p>
 
 Now is a code editor mode. The code editor mode is used to execute **multiple lines of codes** at the same time. Let’s switch to shell mode to execute **line by line** clicking this button on the left side.
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_10.png" width="200">
-</div>
+</p>
 
 ## Challenge 1
 
@@ -168,19 +168,19 @@ Use print()
 - use an equal sign (=) and then tell Python what information the variable should
   be the label for
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_11.png" width="800">
-</div>
+</p>
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_12.png" width="800">
-</div>
+</p>
 
 - Assign 100 to fred and print fred
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_13.png" width="800">
-</div>
+</p>
 
 - Assign 200 to fred, assign fred to john, and print john
 - 200 = fred = john
@@ -218,9 +218,9 @@ D) foundCoins
 
   What is a difference between a) and d)?
 
-  <div style="text-align:center">
+  <p align=center>
     <img src="img_15.png" width="500">
-  </div>
+  </p>
 
 </details>
 
@@ -229,9 +229,9 @@ D) foundCoins
 
 ## Challenge 2
 
-<div style="text-align:center">
+<p align=center>
     <img src="img_14.png" width="800">
-</div>
+</p>
 
 Use variables to express the equation above.
 
