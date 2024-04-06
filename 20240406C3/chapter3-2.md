@@ -17,7 +17,7 @@
 
 <details>
     <summary>What did you notice?</summary>
-    
+
     Yes, a list starts at index position 0, so the first item in a list is 0, the second is 1, and the third is 2.
 
 </details>
@@ -27,7 +27,7 @@
     <img src="img_3.png" width="800">
 </p>
 
-- You can also change an item in a list using [] 
+- You can also change an item in a list using []
 
 ## Subset
 
@@ -61,7 +61,7 @@
 
 - A list can store other lists
 
-## Add items 
+## Add items
 
 <p align=center>
     <img src="img_8.png" width="800">
@@ -76,7 +76,7 @@
 
 - Keep adding like this
 
-## Quiz
+## Quiz 1
 
 fruits_list =  ['apple','banana']
 
@@ -110,7 +110,7 @@ fruits_list.append('grape')
 - Remember that positions start at zero
 - wizard_list[5] refers to the sixth item in the list
 
-## Quiz
+## Quiz 2
 
 fruits_list =  ['apple','banana', 'grape', 'grape']
 
@@ -152,4 +152,15 @@ del fruits_list[2]
 
 - This is telling Python to repeat list1 five times
 
+
+## Challenge
+
+tutor_information =  ['-','Beomsu','Seoul',24,'-']
+
+You will create tutee_information list with your information
+
+1. Get rid of all '-' using **a colon** in tutor_information
+2. **Clone** tutor_information to tutee_information
+3. **Replace** name, region, age with your information
+4. **Combine** tutor_information and tutee_information to all_information list
 
