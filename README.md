@@ -6,5 +6,5 @@ Contents are based on [Python for Kids](https://bedford-computing.co.uk/learning
   : 2024.04.01 
 
   
-### [Chapter 03](https://github.com/boms03/python-tutoring/blob/main/20240405W1/week1.md)
+### [Chapter 03](https://github.com/boms03/python-tutoring/blob/main/20240405W1/chapter3.md)
   : 2024.04.05
