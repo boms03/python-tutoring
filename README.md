@@ -1,5 +1,6 @@
 # Python Tutoring 
 
+
 Contents are based on [Python for Kids](https://bedford-computing.co.uk/learning/wp-content/uploads/2015/10/Python-for-Kids.pdf) by Jason R. Briggs
 
 ### [Chapter 01, 02](https://github.com/boms03/python-tutoring/blob/main/week0/intro.md)
