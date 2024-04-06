@@ -161,10 +161,8 @@ You can try in Python Shell
 
 <details>
     <summary>Answer</summary>
-
-    Knee: a device for finding furniture in the dark
-    
-    This is same as print('%s: a device for finding furniture in the dark’  % 'Knee’)
+Knee: a device for finding furniture in the dark    
+This is same as print('%s: a device for finding furniture in the dark’  % 'Knee’)
     
 </details>
 
