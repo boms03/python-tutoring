@@ -13,3 +13,6 @@ Contents are based on [Python for Kids](https://bedford-computing.co.uk/learning
 ### [Chapter 03 List](https://github.com/boms03/python-tutoring/blob/main/20240406C3/chapter3-2.md)
   : 2024.04.06
 
+### [Chapter 05 Conditions](https://github.com/boms03/python-tutoring/tree/main/20240411C4)
+  : 2024.04.11
+
