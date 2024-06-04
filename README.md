@@ -16,3 +16,6 @@ Contents are based on [Python for Kids](https://bedford-computing.co.uk/learning
 ### [Chapter 05 Conditions](https://github.com/boms03/python-tutoring/tree/main/20240411C4)
   : 2024.04.11
 
+### Summer Break
+  
+  : 2024.06~
