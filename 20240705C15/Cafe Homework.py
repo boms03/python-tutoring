@@ -13,11 +13,14 @@ while True:
         print('What would you like to order?')
         food=input()
         if food in foodlist:
-            if Bankaccount>=price_dict[food]:
-                orderedlist.append(food)
-                Bankaccount= Bankaccount-price_dict[food]
-                Cafeaccount= Cafeaccount+price_dict[food]
-                print("You have ordered " + food)
+            print('How many would you like to order?')
+            number=int(input())
+            if Bankaccount>=price_dict[food]*number:
+                for i in range(number):
+                    orderedlist.append(food)
+                Bankaccount= Bankaccount-price_dict[food]*number
+                Cafeaccount= Cafeaccount+price_dict[food]*number
+                print("You have ordered " + str(number) +' '+ food)
                 
             else:
                 print('I\'m sorry but you don\'t have enough') 
