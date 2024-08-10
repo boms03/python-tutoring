@@ -1,3 +1,10 @@
+def display_todos(todos, filter_done=None):
+    todos.sort()
+    for todo in todos:
+        if filter_done==None:
+            print(todo.priority, todo.title, todo.description, todo.isDone)
+        elif filter_done==todo.isDone:
+            print(todo.priority, todo.title, todo.description, todo.isDone)
 class ToDo:
     def __init__(self, title, description, isDone, priority):
         self.title = title
@@ -6,7 +13,6 @@ class ToDo:
         self.priority = priority
     def __lt__(self,other):
         return self.priority>other.priority
-
 ToDoList=[]
 while True:
     print("Press 1, make your own todo.\nPress 2, show all your todo.\nPress 3, show your finsihed todo.\nPress 4, show your unfinsihed todo.")
@@ -20,30 +26,19 @@ while True:
         ToDo1=ToDo(title,description,isDone,priority)
         ToDoList.append(ToDo1)
         print("Successfully added a new todo")
-        ToDoList.sort()
-
     elif i == '2':
+        ToDoList.sort()
         print("Showing all todo \n")
-        for todo in ToDoList:
-            print(todo.priority, todo.title, todo.description, todo.isDone)
-        print()
-
+        display_todos(ToDoList)
 
     elif i == '3':
         print("Finished todo \n")
-        for todo in ToDoList:
-            if todo.isDone == 'yes':
-                print(todo.priority, todo.title, todo.description, todo.isDone)
-        print()
-
+        display_todos(ToDoList,'yes')
 
     elif i == '4':
         print("Work on todo \n")
-        for todo in ToDoList:
-            if todo.isDone == 'no':
-                print(todo.priority, todo.title, todo.description, todo.isDone)
-        print()
-
+        display_todos(ToDoList,'no')
+        
     elif i == '5':
         print("Update your todo \n")
         for index, todo in enumerate(ToDoList):
