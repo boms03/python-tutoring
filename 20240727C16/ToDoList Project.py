@@ -40,7 +40,7 @@ while True:
     elif i == '4':
         print("Work on todo \n")
         for todo in ToDoList:
-            if todo.isdone == 'no':
+            if todo.isDone == 'no':
                 print(todo.priority, todo.title, todo.description, todo.isDone)
         print()
 
@@ -48,15 +48,23 @@ while True:
         print("Update your todo \n")
         for index, todo in enumerate(ToDoList):
               print(index,todo.priority, todo.title, todo.description, todo.isDone)
-        index = int(input("Which index will you update?"))
+        index =int(input("Which index will you update?"))
         p = input()
         if p == 'a':
             newTitle = input("New title:")
             todo = ToDoList[index]
             todo.title = newTitle
+        elif p == 'b':
+            newDescription = input("New description:")
+            todo= ToDoList[index]
+            todo.description = newDescription
+        elif p == 'c':
+            newisDone = input("New isDone:")
+            todo = ToDoList[index]
+            todo.isDone = newisDone
+
+
+
+
+
             
-
-                    
-
-
-              
