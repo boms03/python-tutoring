@@ -62,6 +62,10 @@ while True:
             newisDone = input("New isDone:")
             todo = ToDoList[index]
             todo.isDone = newisDone
+        elif p == 'd':
+            newPriority = input("New Priority:")
+            todo = ToDoList[index]
+            todo.priority = newPriority
 
 
 
