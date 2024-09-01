@@ -62,6 +62,17 @@ while True:
             todo = ToDoList[index]
             todo.priority = newPriority
 
+    elif i == '6':
+        print("Delet your To Do: ")
+        for index, todo in enumerate(ToDoList):
+            print(index,todo.priority, todo.title, todo.description, todo.isDone)
+        index=int(input("Which index would you like to delet?"))
+        del ToDoList[index]
+        
+            
+            
+        
+
 
 
 
