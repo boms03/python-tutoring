@@ -12,14 +12,13 @@ class linkedlist:
         print("You have found your node")
         return currentNode
     
-    def __init__(self,data):
+    def __init__(self):
         self.head=None
         self.tail=None
 
 
-
     def insert(self,data,index):
-        if self.head=None and self.tail =None:
+        if self.head==None and self.tail==None:
             newNode=Node(data)
             self.head=newNode
             self.tail=newNode
@@ -29,7 +28,6 @@ class linkedlist:
             newNode.next=positionNode.next
             positionNode.next=newNode
             
-
             
     def insertHead(self, data):
         newNode=Node(data)
@@ -41,6 +39,23 @@ class linkedlist:
         self.tail.next=newNode
         self.tail=newNode
 
+    def printall(self):
+        currentNode=self.head
+        while currentNode!=None:
+            print(currentNode.data)
+            currentNode=currentNode.next
 
+
+
+
+linkedlist=linkedlist()
+linkedlist.insert("strawberry",0)
+linkedlist.insertTail("blueberry")
+linkedlist.insertTail("pineapple")
+linkedlist.insertTail("apple")
+linkedlist.insertTail("kiwi")
+linkedlist.printall()
+            
+        
 
 
