@@ -2,6 +2,9 @@ class Node:
     def __init__(self,data):
         self.data=data
         self.child=[]
+    def addChild(self,node):
+        self.child.append(node)
+      
 
 class Tree:
     def __init__(self,root):
@@ -15,12 +18,15 @@ newNode2=Node(2)
 newNode3=Node(5)
 newNode4=Node(9)
 
-newTree.root.child.append(newNode2)
-newTree.root.child.append(newNode3)
-newTree.root.child.append(newNode4)
+newTree.root.addchild (newNode2)
+newTree.root.addchild(newNode3)
+newTree.root.addchild(newNode4)
 
 newNode5=Node(4)
 newNode6=Node(1)
 
-newNode3.child.append(newNode5)
-newNode3.child.append(newNode6)
+newNode3.addchild(newNode5)
+
+newNode3.addchild(newNode6)
+
+
