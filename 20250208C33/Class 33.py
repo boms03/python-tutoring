@@ -1,3 +1,4 @@
+from collections import deque
 class Node:
     def __init__(self,value,right,left):
         self.val=value
@@ -24,8 +25,38 @@ class Tree:
         self.postorder(node.left)
         self.postorder(node.right)
         print(node.value)
-        
 
+
+    def levelorder(self,root):
+        queue=deque()
+        queue.push(root)
+        while not queue.empty():
+            node=queue.popleft()
+            print(node.value)
+            if node.left:
+                queue.push(node.left)
+            if node.right:
+                queue.push(node.right)
+
+
+        
 newNode=Node(5,None,None)
 newTree=Tree(newNode)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
