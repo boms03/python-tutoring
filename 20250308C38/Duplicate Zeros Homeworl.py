@@ -17,3 +17,9 @@ for i in range(0,len(number)):
         newlist.append(number[i])
 print(newlist)
 
+newlist=[]
+        for i in range(0,len(arr)):
+            if arr[i]==0:
+                newlist.append(arr[i])
+            newlist.append(arr[i])
+            arr[i]=newlist[i]
