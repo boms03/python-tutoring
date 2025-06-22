@@ -1,0 +1,177 @@
+# Python Comprehension Practice Questions
+
+## Part A: Multiple Choice Questions
+
+**1. What is the output of the following list comprehension?**
+```python
+result = [x**2 for x in range(5) if x % 2 == 0]
+print(result)
+```
+A. `[0, 1, 4, 9, 16]`  
+B. `[0, 4, 16]`  
+C. `[1, 9]`  
+D. `[0, 2, 4]`  
+
+**2. Which of the following creates a dictionary where keys are numbers 1-5 and values are their cubes?**
+A. `{x: x**3 for x in range(1, 6)}`  
+B. `[x: x**3 for x in range(1, 6)]`  
+C. `{x**3 for x in range(1, 6)}`  
+D. `{x, x**3 for x in range(1, 6)}`  
+
+**3. What type of object does this comprehension create?**
+```python
+result = {word.upper() for word in ['hello', 'world', 'hello']}
+```
+A. List  
+B. Dictionary  
+C. Set  
+D. Tuple  
+
+**4. What is the output of this set comprehension?**
+```python
+numbers = [1, 2, 2, 3, 3, 3, 4]
+result = {x * 2 for x in numbers if x > 2}
+print(result)
+```
+A. `{6, 6, 6, 8}`  
+B. `{6, 8}`  
+C. `[6, 6, 6, 8]`  
+D. `{3, 3, 3, 4}`  
+
+**5. Which comprehension correctly creates a dictionary mapping each letter to its position in the alphabet?**
+```python
+letters = ['a', 'b', 'c', 'd']
+```
+A. `{letter: ord(letter) - ord('a') + 1 for letter in letters}`  
+B. `[letter: ord(letter) - ord('a') + 1 for letter in letters]`  
+C. `{ord(letter) - ord('a') + 1 for letter in letters}`  
+D. `{letter, ord(letter) - ord('a') + 1 for letter in letters}`  
+
+## Part B: Code Analysis
+
+**6. Analyze the following code and predict the output:**
+```python
+data = {'a': 10, 'b': 5, 'c': 15, 'd': 3}
+result1 = [k for k, v in data.items() if v > 7]
+result2 = {k: v*2 for k, v in data.items() if v < 10}
+result3 = {v for v in data.values() if v % 5 == 0}
+
+print("Result1:", result1)
+print("Result2:", result2)
+print("Result3:", result3)
+```
+
+**7. What's wrong with this comprehension? How would you fix it?**
+```python
+# Intended: Create a list of even numbers from 0 to 10
+result = [x for x in range(11) if x % 2 = 0]
+```
+
+**8. Compare these two approaches. Which is more efficient and why?**
+```python
+# Approach A
+numbers = list(range(1000))
+result_A = []
+for x in numbers:
+    if x % 3 == 0:
+        result_A.append(x**2)
+
+# Approach B
+numbers = list(range(1000))
+result_B = [x**2 for x in numbers if x % 3 == 0]
+```
+
+## Part C: Writing Comprehensions
+
+**9. Write comprehensions to solve these problems:**
+
+a) Create a list of squares of odd numbers from 1 to 20.
+
+b) Create a dictionary where keys are words and values are their lengths:
+   ```python
+   words = ['python', 'java', 'javascript', 'go', 'rust']
+   ```
+
+c) Create a set of unique vowels from this sentence:
+   ```python
+   sentence = "The quick brown fox jumps over the lazy dog"
+   ```
+
+**10. Convert these traditional loops into comprehensions:**
+
+a) **List comprehension:**
+```python
+result = []
+for i in range(10):
+    if i % 2 == 1:
+        result.append(i * 3)
+```
+
+b) **Dictionary comprehension:**
+```python
+students = ['Alice', 'Bob', 'Charlie', 'Diana']
+grades = [85, 92, 78, 96]
+student_grades = {}
+for i in range(len(students)):
+    if grades[i] >= 80:
+        student_grades[students[i]] = grades[i]
+```
+
+c) **Set comprehension:**
+```python
+words = ['hello', 'world', 'python', 'hello', 'code']
+unique_lengths = set()
+for word in words:
+    if len(word) > 4:
+        unique_lengths.add(len(word))
+```
+
+## Part D: Advanced Problems
+
+**11. Nested Comprehensions:**
+Write a list comprehension to create a 3x3 matrix (list of lists) where each element is the sum of its row and column indices.
+Expected output: `[[0, 1, 2], [1, 2, 3], [2, 3, 4]]`
+
+**12. Complex Dictionary Comprehension:**
+Given this data:
+```python
+sales_data = [
+    ('Alice', 'Product A', 100),
+    ('Bob', 'Product B', 150),
+    ('Alice', 'Product C', 200),
+    ('Charlie', 'Product A', 80),
+    ('Bob', 'Product A', 120)
+]
+```
+Create a dictionary comprehension that maps each person to their total sales amount.
+
+**13. Conditional Expression in Comprehension:**
+Create a list comprehension that:
+- Takes numbers from 1 to 20
+- If the number is divisible by 3, store "Fizz"
+- If divisible by 5, store "Buzz"  
+- If divisible by both 3 and 5, store "FizzBuzz"
+- Otherwise, store the number itself
+
+**14. Set Operations with Comprehensions:**
+Given two lists:
+```python
+list1 = [1, 2, 3, 4, 5, 6]
+list2 = [4, 5, 6, 7, 8, 9]
+```
+Use set comprehensions to find:
+a) Elements common to both lists
+b) Elements in list1 but not in list2
+c) Elements in either list but not in both
+
+**15. Error Debugging:**
+Find and fix the errors in these comprehensions:
+
+a) `prices = {item, price*1.1 for item, price in [('apple', 1.0), ('banana', 0.5)]}`
+
+b) `result = [x for x in range(10) if x > 5 else x*2]`
+
+c) `data = {'a': 1, 'b': 2}; result = {v: k for k, v in data}`
+
+## Answer Key Section
+*Provide your answers and explain your reasoning for each question.*
