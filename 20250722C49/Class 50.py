@@ -20,6 +20,18 @@ class Node:
 class Tree:
     def __init__(self, root=None):
         self.root=root
+    def levelorder(self):
+        queue1=deque()
+        queue1.append(self.root)
+        print(queue1)
+        while queue1:
+            front=queue1.popleft()
+            if front.left:
+                queue1.append(front.left)
+            if front.right:
+                queue1.append(front.right)
+            print(front.value)
+
     def inorder(self,node=None):
         if node==None:
             return
