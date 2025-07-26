@@ -11,6 +11,8 @@ Node Class --> left child, right child
 
 Tree Class --> Root'''
 
+from collections import deque
+import queue
 class Node:
     def __init__(self,value, left=None, right=None):
         self.value=value
@@ -32,6 +34,10 @@ class Tree:
                 queue1.append(front.right)
             print(front.value)
 
+            
+
+
+        
     def inorder(self,node=None):
         if node==None:
             return
@@ -47,50 +53,17 @@ class Tree:
         self.postorder(node.left)
         self.postorder(node.right)
         print(node.value)
-    def preorder(self, node=None):
+    def preorder(self,node=None):
         if node==None:
             return
         print(node.value)
         self.preorder(node.left)
         self.preorder(node.right)
-        
-    def findDepth(self, n, depth,node=None):
-        if node==None:
-            return 0
-        if node.value==n:
-            return depth
-        return self.findDepth(n, depth+1,node.left)+ self.findDepth(n, depth+1, node.right)
-    def findHeight(self,n,node=None):
-        if node==None:
-            return 0
-        leftheight = self.findHeight(n,node.left)
-        rightheight = self.findHeight(n,node.right)
-        max_height=0
-        if leftheight>rightheight:
-            max_height=leftheight+1
-        else:
-            max_height=rightheight+1
-        if node.value==n:
-            print(max_height)
-        return max_height
-
-    
-
-'''  
-            ---> moving left or right through binary tree
 
 
-            n= 7 --> so moving left or right until you reach number 7
-            WHILE adding one to find DEPTH which will be 3
 
-            if node=!n: ---> if node is NOT 7
-            Add one to the depth
 
-            if node.value=n(7) = current depth
-            --> n=7 so if n = 7
-
-          
-
+'''
 
 Homework:
     
@@ -134,7 +107,10 @@ class preorder:
             preorder(node.right)
         
 
-'''
+        
+def ---> preorder(self,root)        
+terminating condition
+write recursion'''
 
 
 
@@ -167,10 +143,8 @@ print('postorder')
 Tree2.postorder(root_node)
 print('preorder')
 Tree2.preorder(root_node)
-print('findDepth')
-print(Tree2.findDepth(3,0,root_node))
-print('findHeight')
-Tree2.findHeight(1,root_node)
+print('levelorder')
+Tree2.levelorder()
 
 
 
