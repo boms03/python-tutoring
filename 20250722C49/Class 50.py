@@ -74,6 +74,19 @@ class Tree:
             print(max_height)
         return max_height
 
+
+    def isBalanced(self,node=None):
+        if node==None:
+            return True
+        left2=self.isBalanced(node.left)
+        right2=self.isBalanced(node.right)
+        left=self.findHeight(node.left)
+        right=self.findHeight(node.right)
+        return left2 and right2 and abs(left-right)<=1
+        
+        
+        
+
     
 
 '''  
