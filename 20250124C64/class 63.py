@@ -62,6 +62,48 @@ print(numberList)
 
 
 
+numberList = [1, 3, 5, 5, 9]
+print(numberList)
+def swap(i,j, numberList):
+    temp= numberList[j]
+    numberList[j]=numberList[i]
+    numberList[i] = temp
+swap(2,4, numberList)
+print(numberList)
+    
+
+'''    
+    temp = numberList[i]
+    numberList[i] = numberList[j]
+    numberList[j] = temp'''
+
+
+
+
+
+numberList= [1,3,5,5,9]
+def reverse(numberList):
+    '''    1. 0, len(numberList)-1
+    2. 0+1, len(numberList)-2
+    3. 0+2, len(numberList)-3'''
+    
+    Left = 0
+    Right = len(numberList)-1
+    while Left<Right:
+        temp=numberList[Right]
+        numberList[Right]=numberList[Left]
+        numberList[Left]=temp
+        Left = Left+1
+        Right = Right-1
+print(numberList)
+reverse(numberList)
+print(numberList)
+        
+    
+    
+    
+
+
 
 
 
