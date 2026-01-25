@@ -98,6 +98,44 @@ def reverse(numberList):
 print(numberList)
 reverse(numberList)
 print(numberList)
+
+
+
+
+numberList=[3, 5, 1, 4, 9]
+'''1. find largest number index
+        2. swap with 0 and largest number index'''
+
+def swapMax(numberList):
+    Max = 0
+    Min = 0
+    for i in range(1, len(numberList)):
+        if numberList[Max]<numberList[i]:
+            Max=i
+        if numberList[Min]>numberList[i]:
+            Min=i     
+    temp=numberList[Min]
+    numberList[Min]=numberList[Max]
+    numberList[Max]= temp
+print(numberList)
+swapMax(numberList)
+print(numberList)
+
+
+
+
+numberList = [0, 3, 9, 4, 1]
+def findMax(numberList):
+    Max = 0
+    for i in numberList:
+        if i>Max:
+            Max = i
+    print(Max)
+findMax(numberList)
+    
+            
+    
+        
         
     
     
