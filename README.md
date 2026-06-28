@@ -19,3 +19,6 @@ Contents are based on [Python for Kids](https://bedford-computing.co.uk/learning
 ### Summer Break
   
   : 2024.06.01 ~ 06.13
+
+### Javascript
+https://www.gurukultti.org/admin/notice/javascript.pdf
