@@ -6,15 +6,23 @@ const users = new Map();    // username -> { salt, hash }
 const sessions = new Map(); // sid -> username
 const images = new Map();   // imageId -> { type, data(Buffer) }
 const posts = [];           // { id, caption, imageId, author, createdAt }
-let nextPostId = 1; //postid
+let nextPostId = 1;
 
 const MAX_IMAGE_BYTES = 5 * 1024 * 1024; // 5MB
 const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/gif", "image/webp"];
 
-// iframe 미리보기에서도 쿠키가 동작하도록 SameSite=None; Secure; Partitioned 사용
-const COOKIE_ATTRS = "HttpOnly; Secure; SameSite=None; Partitioned; Path=/";
-
 // ---------- helpers ----------
+
+// Safari 호환: SameSite=Lax (first-party 쿠키), HTTPS일 때만 Secure
+// Partitioned / SameSite=None 제거 (Safari는 서드파티 쿠키를 차단함)
+const isSecure = (req) =>
+    req.headers["x-forwarded-proto"] === "https" || Boolean(req.socket.encrypted);
+
+const cookieAttrs = (req) =>
+    isSecure(req)
+        ? "HttpOnly; Secure; SameSite=Lax; Path=/"
+        : "HttpOnly; SameSite=Lax; Path=/";
+
 const esc = (s) =>
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
@@ -50,6 +58,7 @@ const readBuffer = (req, limit) =>
             else chunks.push(chunk);
         });
         req.on("end", () => resolve(tooLarge ? null : Buffer.concat(chunks)));
+        req.on("error", () => resolve(null));
     });
 
 const readForm = async (req) => new URLSearchParams((await readBuffer(req, 10_000))?.toString() ?? "");
@@ -71,7 +80,6 @@ const getUser = (req) => sessions.get(getSid(req)) ?? null;
 const verifyPassword = (password, { salt, hash }) =>
     timingSafeEqual(scryptSync(password, salt, 64), Buffer.from(hash, "hex"));
 
-// HOMEWORK (FRONTEND) YOU DO NOT NEED TO FIX
 // ---------- pages ----------
 const homePage = (user) =>
     layout(
@@ -165,6 +173,7 @@ const newPostPage = (user) =>
              method: "POST",
              headers: { "Content-Type": file.type },
              body: file,
+             credentials: "same-origin",
            });
            if (res.ok) {
              location.href = "/";
@@ -228,14 +237,13 @@ const server = createServer(async (req, res) => {
 
             const sid = randomBytes(24).toString("hex");
             sessions.set(sid, username);
-            return redirect(res, "/", { "Set-Cookie": `sid=${sid}; ${COOKIE_ATTRS}` });
+            return redirect(res, "/", { "Set-Cookie": `sid=${sid}; ${cookieAttrs(req)}` });
         }
 
         case "POST /logout":
             sessions.delete(getSid(req));
-            return redirect(res, "/", { "Set-Cookie": `sid=; Max-Age=0; ${COOKIE_ATTRS}` });
+            return redirect(res, "/", { "Set-Cookie": `sid=; Max-Age=0; ${cookieAttrs(req)}` });
 
-        // HOMEWORK (BACKEND)
         // --- 글쓰기 (사진 + caption) ---
         case "GET /posts/new":
             if (!user) return redirect(res, "/login");
@@ -257,8 +265,7 @@ const server = createServer(async (req, res) => {
 
             const imageId = randomBytes(12).toString("hex");
             images.set(imageId, { type, data });
-            // FIX TWO ???
-            posts.push({ id: caption, file.type, imageId, author: user, createdAt: new Date() });
+            posts.push({ id: nextPostId++, caption, imageId, author: user, createdAt: new Date() });
             return json(res, 201, { ok: true });
         }
 
